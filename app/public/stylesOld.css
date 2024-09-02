@@ -1,0 +1,342 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #ffffff; /* Cor de fundo branca */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove padding padrão */
+  color: #ffffff; /* Ajuste a cor do texto se necessário */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+body,html{
+  background: linear-gradient(180deg, #ffffff 0%, rgb(255, 255, 255) 100%, rgb(255, 255, 255) 100%);
+}
+.Main-Div {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #ffffff; /* Cor de fundo (ajustável) */
+}
+/* ===================== Linha Horizontal do Topo ===================== */
+
+.line-container {
+    position: fixed; /* Fixar o contêiner no topo da página */
+    z-index: 1000; /* Garante que o contêiner fique acima de outros elementos */
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 114px;
+}
+
+  /* Cor de fundo */
+.background-color-blue-line {
+    background-color: #286c74; /* Cor de fundo (ajustável) */
+    width: 100%; /* Largura total do fundo */
+    height: 50px; /* Altura do fundo (ajustável) */
+    position: relative; /* Define a posição relativa para posicionar a linha dentro do fundo */
+}
+
+/* ===================== Botões Social ===================== */
+
+/* Contêiner dos botões de redes sociais */
+.social-buttons 
+{
+    display: flex; /* Alinha os itens em linha */
+    flex-direction: row; /* Alinha os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    position: fixed; 
+    top: 05px; 
+    left: 50px;
+    padding: 0; 
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/* Estilo base para os botões individuais */
+.social-button 
+{
+    margin: 5px 3px;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px; 
+    border-radius: 50%;
+}
+
+/* Cores específicas para cada plataforma */
+.social-button.facebook 
+{
+    color: #ffffff;
+    background-color: #1877f2;
+}
+
+.social-button.twitter 
+{
+    color: #ffffff;
+    background-color: #1da1f2;
+}
+
+.social-button.instagram 
+{
+    color: #ffffff; 
+    background-color: #e1306c;
+}
+
+.social-button:hover 
+{
+    opacity: 0.8;
+}
+
+/* ===================== Lupa ===================== */
+
+
+/* Contêiner do botão de busca */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 200px;
+    z-index: 2000;
+}
+
+/* Botão com a lupa */
+.search-button 
+{
+    background-color: #286c74; /* Cor de fundo do botão */
+    color: white; /* Cor do ícone */
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+}
+
+.search-button:hover 
+{
+    background-color: #ffffff; /* Cor ao passar o mouse */
+    color: #286c74; /* Cor do ícone */
+}
+
+/* Campo de entrada */
+.search-input {
+    width: 0;
+    padding: 0;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    transition: width 0.3s ease, padding 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    right: 35px; /* Ajusta a posição do campo de entrada em relação ao botão */
+}
+
+/* Campo de entrada visível */
+.search-container.open .search-input {
+    width: 150px; /* Largura expandida */
+    padding: 0 10px;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===================== Imagem Autarquia ===================== */
+
+
+.autarquia-container {
+    position: absolute; /* Posiciona o contêiner de forma absoluta */
+    top: 100px; /* Distância do topo */
+    left: 180px; /* Distância da esquerda */
+    width: 250px;
+    height: 250px;
+}
+
+
+
+
+/* ===================== Nav ===================== */
+.nav 
+{
+    display: flex; /* Torna o contêiner flexível */
+    background-color: white;
+}
+
+.link-container {
+    display: flex;
+    justify-content: flex-end; /* Alinha os botões à margem direita */
+    padding: 10px; /* Adiciona algum espaço ao redor do container */
+}
+
+.links {
+  display: flex;
+  gap: 10px; /* Espaçamento entre os botões */
+  position: absolute; /* Posiciona o contêiner de forma absoluta */
+  top: 120px; /* Distância do topo */
+  left: 800px; /* Distância da esquerda */
+}
+
+/* Estilo para cada link/botão */
+.links a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #286c74; /* Define a cor dos textos dos botões */
+  font-size: 1.3rem; /* Define o tamanho da fonte dos botões */
+  font-weight: 600; /* Define o peso da fonte dos botões */
+  padding: 10px 15px; /* Adiciona algum espaçamento interno aos botões */
+  border-radius: 5px; /* Arredonda os cantos dos botões */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+.links a:hover,
+.links a:focus {
+  background-color: #f0f0f0; /* Cor de fundo ao passar o mouse ou ao focar */
+  color: #333; /* Cor do texto ao passar o mouse ou ao focar */
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: relative;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(0, 128, 128, 0.7); /* Cor de fundo translúcida */
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+.overlay h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #f8f9fa; /* Cor de fundo do rodapé */
+  padding: 0px; /* Espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+  margin-top: 100%; /* Empurra o rodapé para o final da página */
+}
+
+
+.embla {
+  position: relative;
+  margin-left: 0;
+  margin: 0;
+  background-color: #ffffff; /* Fundo branco */
+  top: 240px;
+  left: 0px;
+  max-width: 1263px; /* Aumentei a largura do slider */
+  height: 690px; /* Aumentei a altura do slider para manter proporções */
+  width: 1263px; /* Largura do slider */
+}
+
+.emblaViewport {
+  overflow: hidden;
+  width: 140%;
+  height: 100%; 
+}
+
+.emblaContainer {
+  display: flex;
+  height: 100%; 
+}
+
+.emblaSlide {
+  display: flex;
+  min-width: 100%;
+  position: relative;
+  height: 100%; 
+}
+
+.emblaSlideInner {
+  display: flex;
+  flex-direction: row; 
+  width: 90%;
+  height: 100%; 
+}
+
+.emblaSlideImg {
+  width: 70%;
+  object-fit: cover;
+}
+
+.emblaSlideText {
+  position: absolute;
+  bottom: 20px;
+  left: 65%;
+  width: 558px;
+  height: 213px;
+  padding: 20px;
+  background-color: #69A391; 
+  color: #ffffff;
+  z-index: 100000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  opacity: 0.8;
+  text-align: center; 
+  overflow: hidden; 
+}
+
+.emblaSlideText h2 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+}
+
+.emblaSlideText p {
+  margin: 0;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.emblaButtons {
+  position: absolute; /* Para manter os botões no fundo do slider */
+  bottom: -100px; /* Espaçamento do fundo do slider */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2000; /* Para garantir que os botões fiquem acima de outros elementos */
+}
+
+.emblaButtons button {
+  background-color: #000000; /* Cor do botão */
+  color: #ffffff; /* Cor do texto do botão */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.emblaButtons button:hover {
+  background-color: #000000; /* Cor ao passar o mouse */
+}

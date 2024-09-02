@@ -1,0 +1,44 @@
+body {
+    background-color: #F9F9F9;
+    margin: 0;
+    padding: 0;
+    color: #F9F9F9; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body, html {
+  background: linear-gradient(180deg, #ffffff 0%, rgb(255, 255, 255) 100%, rgb(255, 255, 255) 100%);
+}
+
+.Main-Div {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #F9F9F9; 
+}
+
+/* Linha Horizontal do Topo */
+.line-container {
+    position: fixed; 
+    z-index: 1000; 
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 114px;
+}
+
+.background-color-blue-line {
+    background-color: #286c74; 
+    width: 100%; 
+    height: 50px; 
+    position: relative; 
+}
+footer {
+  padding: 0px; 
+  text-align: center; 
+  margin-top: 0px;
+  background-color: #286c74;
+  color: white;
+  padding-top: 40px; 
+  padding-bottom: 40px; 
+}
